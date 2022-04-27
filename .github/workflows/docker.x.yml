@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - "test"
+  pull_request:
+    branches:
+      - "test"
 
 jobs:
   docker:
@@ -24,5 +27,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
+          context: .
+          file: Dockerfile
           push: true
-          tags: devenes/nodejs-test:${{github.run_number}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-test:${{github.run_number}}
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/nodejs-test:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/nodejs-test:buildcache,mode=max

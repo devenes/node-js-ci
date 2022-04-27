@@ -1,6 +1,6 @@
 # Node Server with Express
 
-[![Node.js CI](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml/badge.svg)](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml/badge.svg)](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml) [![Docker Build](https://github.com/devenes/node-js-ci/actions/workflows/docker.x.yml/badge.svg?branch=test)](https://github.com/devenes/node-js-ci/actions/workflows/docker.x.yml)
 
 ## Continuous Integration with Node.js using GitHub Actions
 
