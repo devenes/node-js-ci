@@ -6,7 +6,7 @@
 
 ![Node.js CI](./readme/tests.png)
 
-### Define your branch name and the actions that you want to trigger to run your test
+### Define your branch name and the actions you want to trigger to start your job
 
 - Push
 
@@ -22,7 +22,7 @@
     branches: [main]
   ```
 
-### Define your job name and environment to test your code
+### Define your job name and the environment to build your code
 
 ```
 jobs:
@@ -30,7 +30,7 @@ jobs:
         runs-on: ubuntu-latest
 ```
 
-### Define your Node versions to test your code
+### Define the Node versions to test your code on
 
 ```
 strategy:
@@ -44,8 +44,8 @@ strategy:
 steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-    uses: actions/setup-node@v3
-    with:
+      uses: actions/setup-node@v3
+      with:
         node-version: ${{ matrix.node-version }}
         cache: "npm"
     - run: npm ci
