@@ -5,16 +5,18 @@
 
 # This workflow integrates njsscan with GitHub's Code Scanning feature
 # nodejsscan is a static security code scanner that finds insecure code patterns in your Node.js applications
+# SARIF, the Static Analysis Results Interchange Format, is a standard,
+# JSON-based format for the output of static analysis tools.
 
-name: njsscan sarif
+name: Node.js Scan SARIF
 
 on:
   push:
-    branches: [test]
+    branches: [test, master, release, main]
 
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [test]
+    branches: [test, master, release, main]
 
   schedule:
     - cron: "29 12 * * 6"
@@ -38,7 +40,7 @@ jobs:
 
       - name: nodejsscan scan
         id: njsscan
-        uses: ajinabraham/njsscan-action@7237412fdd36af517e2745077cedbf9d6900d711
+        uses: ajinabraham/njsscan-action@master
         with:
           args: ". --sarif --output results.sarif || true"
 
