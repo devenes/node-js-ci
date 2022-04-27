@@ -3,10 +3,11 @@ name: Docker Build And Push
 on:
   push:
     branches:
-      - "test"
+      - "release"
+
   pull_request:
     branches:
-      - "test"
+      - "release"
 
 jobs:
   docker:
