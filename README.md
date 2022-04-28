@@ -1,6 +1,6 @@
 # Node Server with Express
 
-[![Node.js CI](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml/badge.svg)](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml) [![Docker Build](https://github.com/devenes/node-js-ci/actions/workflows/docker.x.yml/badge.svg?branch=test)](https://github.com/devenes/node-js-ci/actions/workflows/docker.x.yml)
+[![Node.js CI](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml/badge.svg)](https://github.com/devenes/node-js-ci/actions/workflows/node.js.yml) [![Docker Build](https://github.com/devenes/node-js-ci/actions/workflows/docker.x.yml/badge.svg?branch=test)](https://github.com/devenes/node-js-ci/actions/workflows/docker.x.yml) [![Node.js Scan SARIF](https://github.com/devenes/node-js-ci/actions/workflows/node.js.scan.yml/badge.svg)](https://github.com/devenes/node-js-ci/actions/workflows/node.js.scan.yml) ![Node.js Coverage](https://github.com/npm/cli/actions/workflows/ci.yml/badge.svg) ![Node.js Coverage](https://img.shields.io/static/v1?label=npm&message=v16.0.0&color=red&logo=npm)
 
 ## Continuous Integration with Node.js using GitHub Actions
 
